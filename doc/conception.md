@@ -1,6 +1,4 @@
-
 <img src="logo_sogeti.png" width="30%" height="30%">
-
 
 # Conception des cas de tests
 
@@ -24,10 +22,10 @@
 
 TEST TYPE : Test case Positive / Test case Negative / Scenario E2E
 
-| Test ID     | Test case           | Description                               | Types tests   | Prerequis                     | Assertions                                  |
-| ----------- | ------------------- | ----------------------------------------- | ------------- | ----------------------------- | ------------------------------------------- |
-| Cypress-001 | Login page          | Se connecter avec un<br />"un champ vide" | test négatif | ID:champ vide<br />Mdp:valide | Bienvenue<br /> Test Username               |
-| Cypress-002 | Login page          | Se connecter avec un<br />compte Admin    | test positif  | ID:valide<br />Mdp:valide     | Bienvenue<br /> Admin Test                 |
-| Cypress-003 | Login page          | Se connecter avec un<br />compte Admin    | Test négatif | ID:valide<br />Mdp:invalide   | Mot de passe ou<br />compte invalide        |
-| Cypress-004 | Création de compte | Particulier                               | test positif  | Remplir le formulaire         | Le formulaire d'inscription<br /> s'affiche |
-| Cypress-005 | Création de compte | Professionnel                             | test positif  | Remplir le formulaire         | Le formulaire d'inscription<br />s'affiche  |
+| Test ID     | Test case           | Description                                                       | Types tests  | Prerequis                 | Assertions                                                                            |
+| ----------- | ------------------- | ----------------------------------------------------------------- | ------------ | ------------------------- | ------------------------------------------------------------------------------------- |
+| Cypress-001 | Login page          | Se connecter avec un<br />"compte valide"                         | test positif | ID:valide<br />Mdp:valide | Bienvenue<br /> Test Username                                                         |
+| Cypress-002 | Login page          | Se connecter avec<br />"compte invalide"                          | test positif | ID:valide<br />Mdp:valide | Bienvenue<br /> Admin Test                                                           |
+| Cypress-003 | Login page          | S'inscrire avec un<br />compte particulier                        | Test positif |                           |                                                                                       |
+| Cypress-004 | Création de compte | S'inscrire avec<br />"un compte Pro"                              | test positif | Remplir le formulaire     | Le formulaire d'inscription<br /> s'affiche                                           |
+| Cypress-005 | Création de compte | Se connecter avec<br /> "un compte particulier <br />existant " | test positif | Remplir le formulaire     | Le message s'affiche:<br />L’email est déjà utilisé.<br /> Essayez un autre email |

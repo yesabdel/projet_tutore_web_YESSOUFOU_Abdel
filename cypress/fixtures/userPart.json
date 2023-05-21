@@ -1,8 +1,8 @@
 {
   "type": "1",
-  "username": "brayan.kshlerin@blank-instant.net",
-  "prenom": "Brayan",
-  "nom": "Kshlerin",
+  "username": "jaylen.swaniawski@mixed-brass.com",
+  "prenom": "Jaylen",
+  "nom": "Swaniawski",
   "password": "Formation33",
   "confirmPassword": "Formation33",
   "adresse": "1",
@@ -13,7 +13,7 @@
   "cin": "123456789",
   "dateNaissance": "2000-08-10",
   "tel": "0605040302",
-  "nomConjoint": "Fisher",
-  "prenomConjoint": "Feeney",
+  "nomConjoint": "Rippin",
+  "prenomConjoint": "Kuhn",
   "dateNaissanceConjoint": "2000-08-10"
 }
