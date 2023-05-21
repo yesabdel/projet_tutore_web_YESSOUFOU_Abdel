@@ -1,0 +1,19 @@
+{
+	"type": "1",
+	"username": "",
+	"prenom": "",
+	"nom": "",
+	"password": "Formation33",
+	"confirmPassword": "Formation33",
+	"adresse": "1",
+	"ville": "Nice",
+	"pays": "France",
+	"codePostal": "75001",
+	"passport": "1234456789",
+	"cin": "123456789",
+	"dateNaissance": "2000-08-10",
+	"tel": "0605040302",
+	"nomConjoint": "",
+	"prenomConjoint": "",
+	"dateNaissanceConjoint": "2000-08-10"
+}
