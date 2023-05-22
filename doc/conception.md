@@ -2,7 +2,7 @@
 
 # Conception des cas de tests
 
-## tests à effectuer
+## Tests à effectuer
 
 1. Authentification
    Compte professionnel

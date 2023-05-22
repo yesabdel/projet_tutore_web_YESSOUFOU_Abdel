@@ -8,7 +8,7 @@ describe("TEST WEB OPEN CRUISE", () => {
   beforeEach(() => {
     cy.visit(Cypress.env('url'));
   });
-  it("TEST001 **** Connexion Compte Valide ****",{ tags: '@smoke' }, () => {
+  it("Cypress_001 ******* Connexion Compte Valide *******",{ tags: '@smoke' }, () => {
     
     const loginStep = new LoginStep();
     cy.log(`Se Connecter un Compte Valide`);
@@ -18,7 +18,7 @@ describe("TEST WEB OPEN CRUISE", () => {
   });
    
 
-  it("TEST002 **** Connexion avec compte invalide ****", () => {
+  it("Cypress_002 ******* Connexion avec compte invalide *******", () => {
     const loginStep = new LoginStep();
     cy.log(`Se connecter avec Compte invalide`);
     loginStep.setLogin("XXXXXXX", "YYYYYY");
@@ -27,7 +27,7 @@ describe("TEST WEB OPEN CRUISE", () => {
     cy.xpath('//div[@role="alertdialog"]').screenshot();
   });
 
-  it("TEST003 ****Inscription avec compte Particulier ****", () => {
+  it("Cypress_003 ******* Inscription avec compte Particulier *******", () => {
     const stepSouscription = new StepSouscription();
     cy.log("**********   S'inscrire avec un Compte Particulier    ************");
     cy.fixture("data-part.json", "utf8").as("users");
@@ -41,7 +41,7 @@ describe("TEST WEB OPEN CRUISE", () => {
       cy.wait(3000);
       const loginStep = new LoginStep();
       cy.log(`Se Connecter en tant que Admin`);
-      loginStep.setLogin("admin@test.com", "Sogeti33");
+      loginStep.setLogin(Cypress.env("username"),Cypress.env("password"));
       const stepGestionCompte = new StepGestionCompte();
       stepGestionCompte.ActiveCompte(data);
       cy.xpath(`//tr[contains(.,'${data.username}')]`).screenshot();
@@ -54,7 +54,7 @@ describe("TEST WEB OPEN CRUISE", () => {
       loginStep.Logout();
     });
   });
-  it("TEST04 **** Inscription avec un compte Pro ****", () => {
+  it("Cypress_004 **** Inscription avec un compte Pro ****", () => {
     const stepSouscription = new StepSouscription();
     cy.log("**********   S'inscrire avec Compte Professionnel    ************");
     cy.fixture("data-pro.json", "utf8").as("users");
@@ -64,7 +64,7 @@ describe("TEST WEB OPEN CRUISE", () => {
       cy.wait(2000);
       const loginStep = new LoginStep();
       cy.log(`Se Connecter en tant que Admin`);
-      loginStep.setLogin("admin@test.com", "Sogeti33");
+      loginStep.setLogin(Cypress.env("username"),Cypress.env("password"));
       const stepGestionCompte = new StepGestionCompte();
       stepGestionCompte.ActiveCompte(data);
       cy.xpath(`//tr[contains(.,'${data.username}')]`).screenshot();
@@ -78,7 +78,7 @@ describe("TEST WEB OPEN CRUISE", () => {
       
     });
   });
-  it("TEST05 **** Inscription avec compte particulier existant *****", () => {
+  it("Cypress_005 **** Inscription avec compte particulier existant *****", () => {
     const stepSouscription = new StepSouscription();
     cy.log("**********   S'inscrire avec un Compte Particulier Existant  ************");
     cy.fixture("userPart.json", "utf8").as("users");
