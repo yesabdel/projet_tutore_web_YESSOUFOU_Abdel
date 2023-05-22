@@ -1,7 +1,7 @@
 const LOCATOR_BUTTON_CONFIG =        '//*[@id="adminConfig"]'
 const LOCATOR_BUTTON_USER = '//a[@routerlink="/admin/utilisateur"]'
 const LOCATOR_BUTTON_USER_LIST = '//a[@routerlink="/admin/userList"]'
-const balamou = '//tr[contains(.,${data.username})]//*[contains(text(), "Approuver")]'
+const del = '//tr[contains(.,${data.username})]//*[contains(text(), "Approuver")]'
 
 
 class PageGestionCompte{
