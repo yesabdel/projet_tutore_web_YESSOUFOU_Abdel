@@ -78,7 +78,7 @@ describe("TEST WEB OPEN CRUISE", () => {
       
     });
   });
-  it("Cypress_005 **** Inscription avec compte particulier existant *****", () => {
+  it.only("Cypress_005 **** Inscription avec compte particulier existant *****", () => {
     const stepSouscription = new StepSouscription();
     cy.log("**********   S'inscrire avec un Compte Particulier Existant  ************");
     cy.fixture("userPart.json", "utf8").as("users");
